@@ -2,6 +2,8 @@ package com.ceica.PruebaSpring;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name="user")
 public class User {
@@ -14,6 +16,10 @@ public class User {
 
     public User() {
     }
+/*@OneToMany(mappedBy = "iduser",fetch = FetchType.EAGER)
+private List<Task>taskList;*/
+    @OneToMany(mappedBy = "idrol",fetch = FetchType.EAGER)
+    private List<Task>taskList;
 
     public Integer getIduser() {
         return iduser;
@@ -54,6 +60,7 @@ public class User {
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", idrol=" + idrol +
+                ", taskList=" + taskList +
                 '}';
     }
 }

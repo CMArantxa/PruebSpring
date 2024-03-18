@@ -30,8 +30,8 @@ public class PruebaSpringApplication {
 			/*Iterable<User> user=userRepository.findAll();
 			System.out.println(user);*/
 
-			/*User user=userRepository.findAllByUsername("pepe");
-			System.out.println(user);*/
+			User user=userRepository.findAllByUsername("pepe");
+			System.out.println(user);
 
 
 			/*User user=new User();
